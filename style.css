@@ -146,7 +146,11 @@ body {
   background: var(--accent);
   box-shadow: 0 0 10px var(--accent);
   animation: pulse 2s infinite;
+  flex-shrink: 0;
 }
+.tag-text { display: inline; }
+.tag-part { display: inline; }
+.tag-sep { display: inline; }
 @keyframes pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
   50%       { opacity: .5; transform: scale(0.8); }
@@ -706,6 +710,39 @@ body.light body {
     font-size: 17px !important;
     box-shadow: none !important;
     margin: 0 !important;
+  }
+
+  /* Hero date/time tag: stack into 3 separate lines on mobile */
+  .hero-tag {
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 22px;
+    border-radius: 16px;
+  }
+  .tag-text {
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+  }
+  .tag-part { display: block; }
+  .tag-sep { display: none; }
+
+  /* Extra vertical room so the scrolling wave trace clears the
+     stacked stat pills below it (About/Stats stack to 3 rows here) */
+  #hero {
+    min-height: 108vh;
+    padding-bottom: 100px;
+  }
+  .hero-stats { margin-bottom: 24px; }
+
+  /* Hide the page's vertical scrollbar on mobile only (the
+     horizontal swipe scrollbar on the about-cards is untouched) */
+  html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  html::-webkit-scrollbar, body::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none !important;
   }
 
   .gallery-grid { grid-template-columns: 1fr; }

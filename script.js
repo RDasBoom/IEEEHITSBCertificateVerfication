@@ -262,7 +262,7 @@ document.getElementById("cert-input")?.addEventListener("keydown", (e) => {
 
 // ── FOOTER TYPING ON SCROLL ──────────────────────────
 const footerEl = document.getElementById("footer-typed");
-const footerText = "Wireless Talk";
+const footerText = "WirelessTalk";
 let footerTyped = false;
 
 function typeFooter() {

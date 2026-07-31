@@ -260,6 +260,22 @@ document.getElementById("cert-input")?.addEventListener("keydown", (e) => {
   if (e.key === "Enter") verify();
 });
 
+// ── GALLERY LIGHTBOX ──────────────────────────────────
+function openLightbox(src) {
+  const box = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+  img.src = src;
+  box.classList.add("open");
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").classList.remove("open");
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeLightbox();
+});
+
 // ── FOOTER TYPING ON SCROLL ──────────────────────────
 const footerEl = document.getElementById("footer-typed");
 const footerText = "WirelessTalk";

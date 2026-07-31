@@ -186,10 +186,16 @@ right:30px;
       <div class="section-tag reveal">// event gallery</div>
       <h2 class="section-title reveal">Event <span class="accent">Glimpses</span></h2>
       <div class="gallery-grid reveal">
-        <div class="gallery-placeholder"><span class="gp-icon">📸</span><span class="gp-label">Photos coming soon</span></div>
-        <div class="gallery-placeholder"><span class="gp-icon">📸</span><span class="gp-label">Photos coming soon</span></div>
-        <div class="gallery-placeholder"><span class="gp-icon">📸</span><span class="gp-label">Photos coming soon</span></div>
-        <div class="gallery-placeholder"><span class="gp-icon">📸</span><span class="gp-label">Photos coming soon</span></div>
+        <div class="gallery-photo" onclick="openLightbox('Gallery/Screenshot (213).png')"><img src="Gallery/Screenshot (213).png" alt="Session glimpse — Future space exploration slide" loading="lazy"/></div>
+        <div class="gallery-photo" onclick="openLightbox('Gallery/Screenshot (224).png')"><img src="Gallery/Screenshot (224).png" alt="Session glimpse — closing thank you slide" loading="lazy"/></div>
+        <div class="gallery-photo" onclick="openLightbox('Gallery/Screenshot (240).png')"><img src="Gallery/Screenshot (240).png" alt="Session glimpse — speaker introduction slide" loading="lazy"/></div>
+        <div class="gallery-photo" onclick="openLightbox('Gallery/TECH 1.jpeg')"><img src="Gallery/TECH 1.jpeg" alt="Session glimpse — Wi-Fi evolution slide" loading="lazy"/></div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Event glimpse enlarged"/>
       </div>
     </div>
   </section>
